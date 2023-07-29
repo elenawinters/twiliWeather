@@ -14,8 +14,21 @@ weatherPossibilities = {
 
     'SNOW': ['SNOWLIGHT', 'BLIZZARD', 'XMAS', 'CLEAR', 'EXTRASUNNY', 'CLOUDY'],
     'SNOWLIGHT': ['SNOW', 'BLIZZARD', 'XMAS'],
-    'BLIZZARD': []
+    'BLIZZARD': ['SNOW'],
+    'XMAS': ['SNOW', 'SNOWLIGHT'],
+
+    'CLOUDS': ['EXTRASUNNY', 'CLEAR', 'OVERCAST', 'FOGGY', 'SMOG'],
+    'EXTRASUNNY': ['CLEAR', 'FOGGY', 'SMOG'],
+    'FOGGY': ['SMOG', 'CLEAR', 'EXTRASUNNY'],
+    'SMOG': ['FOGGY', 'CLEAR', 'EXTRASUNNY'],
+    'NEUTRAL': typelist,
+    'HALLOWEEN': typelist,
 }
+
+Object.entries(weatherPossibilities).forEach((key, i) => {
+    weatherPossibilities[key[0]].push(key[0])
+})
+
 
 
 seasonPossibilities = {}

@@ -1,5 +1,15 @@
 // SetWeatherTypeTransition(weatherMix1, weatherMix2, mixPercentage)
 
+RegisterCommand('wprog', (source, args) => {
+    const [w1, w2, wp] = GetWeatherTypeTransition()
+    // const [w1, w2, wp] = args
+    SetWeatherTypeTransition(GetHashKey(w1), GetHashKey(w2), 0.95)
+    allowUpcomingChange = true
+    // SetTransitionTimecycleModifier(GetHashKey(w2), 0)
+});
+
+
+
 RegisterCommand('wtest', (source, args) => {
     const [w1, w2, wp] = args
     SetWeatherTypeTransition(GetHashKey(w1), GetHashKey(w2), parseFloat(wp) / 100)
