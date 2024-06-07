@@ -3,7 +3,7 @@
 RegisterCommand('wprog', (source, args) => {
     const [w1, w2, wp] = GetWeatherTypeTransition()
     // const [w1, w2, wp] = args
-    SetWeatherTypeTransition(GetHashKey(w1), GetHashKey(w2), 0.95)
+    SetWeatherTypeTransition(GetHashKey(w1), GetHashKey(w2), 1)
     allowUpcomingChange = true
     // SetTransitionTimecycleModifier(GetHashKey(w2), 0)
 });

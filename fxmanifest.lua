@@ -4,8 +4,8 @@ games { 'gta5', 'rdr3' }
 rdr3_warning 'I acknowledge that this is a prerelease build of RedM, and I am aware my resources *will* become incompatible once RedM ships.'
 
 author 'Elena Winters'
-description 'Weather systems for both FiveM and RedM'
-version '23.6.26'
+description 'Weather systems for both FiveM and RedM (RedM is still a work in progress)'
+version '24.6.7'
 
 dependencies {
     'twiliCore'
@@ -33,3 +33,4 @@ client_scripts {
     'client/c_sync.js',
     'client/c_tests.js'
 }
+
